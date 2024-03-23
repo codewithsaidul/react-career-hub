@@ -1,4 +1,4 @@
-import { Link, useLoaderData, useParams } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
 import { FaRegCalendarAlt } from "react-icons/fa";
 import { CiDollar, CiPhone, CiLocationOn } from "react-icons/ci";
 import { ToastContainer, toast } from "react-toastify";
@@ -7,6 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { MdOutlineEmail } from "react-icons/md";
 import BgImg from "../../assets/images/bg1.png";
 import BgImg2 from "../../assets/images/bg2.png";
+import { saveJobApplication } from "../../utility/localstorage";
 
 export const JobDetails = () => {
   const jobs = useLoaderData();
@@ -18,8 +19,13 @@ export const JobDetails = () => {
   const job = jobs.find((job) => job.id === parseInt(idInt));
 
   const handleAppliedJob = () => {
+
+    saveJobApplication(idInt);
+    
     toast("You Have Successfullu Applied");
   };
+
+
   return (
     <div className="mb-20">
       <div className="bg-gradient-to-r from-[#7E90FE0D] to-[#9873FF0D] py-32 relative">
