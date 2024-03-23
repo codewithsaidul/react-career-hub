@@ -16,8 +16,8 @@ export const FeaturedJobs = () => {
   return (
     <div className="my-20">
       <div className="text-center">
-        <h2 className="text-5xl text-[#1A1919] font-extrabold mb-3">
-          Featured Jobs {jobs.length}
+        <h2 className="text-4xl sm:text-5xl text-[#1A1919] font-extrabold mb-3">
+          Featured Jobs 
         </h2>
         <p className="text-base text-[#757575] font-medium mb-10">
           Explore thousands of job opportunities with all the information you
@@ -25,7 +25,7 @@ export const FeaturedJobs = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 items-center md:items-start  md:grid-cols-2 gap-8">
         {jobs.slice(0, dataLength).map((job) => (
           <FeaturedJob key={job.id} job={job} />
         ))}

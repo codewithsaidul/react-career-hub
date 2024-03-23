@@ -4,7 +4,7 @@ import { FeaturedJobs } from "../featuredJobs/FeaturedJobs"
 
 export const Home = () => {
   return (
-    <div className="mt-20">
+    <div>
       <Banner/>
       <FeaturedJobs/>
     </div>

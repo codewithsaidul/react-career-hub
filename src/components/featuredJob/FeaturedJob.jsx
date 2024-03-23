@@ -53,9 +53,6 @@ const FeaturedJob = ({job}) => {
           </div>
         </div>
       </div>
-
-
-      
     </div>
   );
 }

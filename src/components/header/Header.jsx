@@ -28,7 +28,7 @@ export const Header = () => {
     );
 
   return (
-    <div className="navbar bg-base-100">
+    <div className="navbar">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="text-2xl mr-5 lg:hidden">
