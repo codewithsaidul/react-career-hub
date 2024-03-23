@@ -1,8 +1,34 @@
+import { NavLink } from "react-router-dom";
 
 
 export const Header = () => {
+
+    const navLinks = (
+      <>
+        <li className="text-lg text-[#7E90FE] font-semibold">
+          <NavLink to="/">Home</NavLink>
+        </li>
+
+        <li className="text-lg text-[#757575] font-semibold">
+          <NavLink to="/jobs">Jobs</NavLink>
+        </li>
+
+        <li className="text-lg text-[#757575] font-semibold">
+          <NavLink to="/applied">Applied Jobs</NavLink>
+        </li>
+
+        <li className="text-lg text-[#757575] font-semibold">
+          <NavLink to="/statistics">Statistics</NavLink>
+        </li>
+
+        <li className="text-lg text-[#757575] font-semibold">
+          <NavLink to="/blog">Blog</NavLink>
+        </li>
+      </>
+    );
+
   return (
-    <div className="navbar bg-base-100 w-full px-3 sm:px-5 lg:px-0 max-w-[1170px] mx-auto lg:w-11/12">
+    <div className="navbar bg-base-100">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="text-2xl mr-5 lg:hidden">
@@ -24,30 +50,24 @@ export const Header = () => {
 
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            className="dropdown-content mt-3 z-[1] p-10 space-y-5 shadow bg-base-100 rounded-box w-96"
           >
-            <li className="text-lg text-[#7E90FE] font-semibold">Statistics</li>
-            <li className="text-lg text-[#757575] font-semibold">
-              Applied Jobs
-            </li>
-            <li className="text-lg text-[#757575] font-semibold">Blog</li>
+            {navLinks}
           </ul>
         </div>
 
-        <a className="text-xl sm:text-3xl text-[#1A1919] font-bold">CareerHub</a>
+        <a className="text-xl sm:text-3xl text-[#1A1919] font-bold">
+          CareerHub
+        </a>
       </div>
 
       <div className="navbar-center hidden lg:flex">
-        <ul className="flex gap-x-20 px-1">
-          <li className="text-lg text-[#7E90FE] font-semibold">Statistics</li>
-          <li className="text-lg text-[#757575] font-semibold">Applied Jobs</li>
-          <li className="text-lg text-[#757575] font-semibold">Blog</li>
-        </ul>
+        <ul className="flex gap-x-10 px-1">{navLinks}</ul>
       </div>
 
       <div className="navbar-end">
         <button className="p-3 sm:py-4 sm:px-6 bg-gradient-to-r from-[#7E90FE] to-[#9873FF] rounded-lg text-sm sm:text-xl text-[#fff] font-extrabold">
-          Star Applying
+          Start Applying
         </button>
       </div>
     </div>
