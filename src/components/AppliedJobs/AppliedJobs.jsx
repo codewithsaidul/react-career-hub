@@ -2,11 +2,9 @@
 // import PropTypes from 'prop-types'
 
 const AppliedJobs = () => {
-  return (
-    <div>AppliedJobs</div>
-  )
-}
+  return <div>AppliedJobs</div>;
+};
 
-AppliedJobs.propTypes = {}
+AppliedJobs.propTypes = {};
 
-export default AppliedJobs
+export default AppliedJobs;
