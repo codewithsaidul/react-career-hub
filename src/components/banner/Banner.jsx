@@ -21,7 +21,7 @@ const Banner = () => {
 
       <div>
         <figure className="w-full lg:mt-20">
-          <img className="object-fit" src={UserImage} alt="" />
+          <img className="w-full" src={UserImage} alt="" />
         </figure>
       </div>
     </div>
